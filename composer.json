@@ -1,0 +1,34 @@
+{
+    "name": "local/equipment-project",
+    "description": "Модуль local.equipment для Битрикс24: HL-блок «Оборудование», грид, вкладка смарт-процесса, счётчик в сделке",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.4",
+        "andreyryabin/sprint.migration": "^5.16",
+        "composer/installers": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Local\\Equipment\\": "local/modules/local.equipment/lib/",
+            "Local\\Equipment\\Tests\\": "local/modules/local.equipment/tests/"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "local/modules/{$name}/": ["type:bitrix-module"]
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.4"
+        },
+        "allow-plugins": {
+            "composer/installers": true
+        },
+        "sort-packages": true
+    }
+}
